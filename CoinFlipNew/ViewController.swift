@@ -1,19 +1,29 @@
 //
-//  ViewController.swift
-//  CoinFlipNew
+
 //
-//  Created by Yash on 10/27/21.
+//  ViewController.swift
+//  CoinFlip
+//
+//  Created by Yash on 9/22/21.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    
+    @IBOutlet weak var image: UIImageView!
+    
+    var imagelist = [UIImage(named: "Tails"), UIImage(named: "Heads")]
+    
+    
+    @IBAction func Click(_ sender: UIButton) {
+        
+        let randomPosition = Int.random(in: 0...1)
+                
+                image.image = imagelist[randomPosition]
     }
-
-
+    
 }
 
+   
